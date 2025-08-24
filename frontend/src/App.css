@@ -1,0 +1,286 @@
+/* Center align the entire page */
+body {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text for contrast */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Center-align the form container */
+.form-container {
+  max-width: 700px;
+  margin: auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.474);
+}
+
+/* Styling for headings */
+h1,
+h2 {
+  text-align: center;
+  color: #cd9bff; /* Light purple (300) */
+}
+
+/* Input fields and buttons styling */
+input[type="text"],
+input[type="file"] {
+  width: calc(100% - 20px); /* Adjust width to prevent stretching */
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4caf50; /* Green button */
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem; /* Smaller button size */
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+button:disabled {
+  background-color: #cccccc; /* Disabled button gray */
+}
+
+/* Drag-and-drop section styling */
+.file-input-wrapper {
+  position: relative;
+}
+
+.file-input-wrapper label {
+  display: block;
+  padding: 0.8rem;
+  border: none;
+  background-color: #333; /* Dark gray background */
+}
+
+.file-input-wrapper label:hover {
+  background-color: #444; /* Slightly lighter on hover */
+}
+
+/* Styling for the result box */
+.result-box {
+  margin-top: 1.5rem; /* Space above the result box */
+  padding: 1rem; /* Padding inside the box */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1rem; /* Adjust text size */
+  line-height: 1.5; /* Proper line spacing */
+}
+
+/* Styling for legitimate transactions */
+.result-box.legit {
+  border: 2px solid #4caf50; /* Green border */
+  background-color: #e8f5e9; /* Light green background */
+  color: #2e7d32; /* Dark green text color */
+}
+
+/* Styling for fraudulent transactions */
+.result-box.fraud {
+  border: 2px solid #f44336; /* Red border */
+  background-color: #ffebee; /* Light red background */
+  color: #b71c1c; /* Dark red text color */
+}
+
+/* Ensure proper spacing between lines in the result box */
+.result-box span {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.results-table {
+  width: 90%; /* Adjust width for better alignment */
+  margin: 2rem auto; /* Center the table */
+  border-collapse: collapse; /* Remove gaps between borders */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a modern look */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensure rounded corners are clean */
+}
+
+.results-table th,
+.results-table td {
+  padding: 12px; /* Add padding for better spacing */
+  text-align: center; /* Center-align content */
+  font-size: 1rem; /* Adjust font size */
+}
+
+.results-table th {
+  background-color: #6a1b9a; /* Purple header background */
+  color: white; /* White text for headers */
+  font-weight: bold; /* Make headers bold */
+}
+
+.results-table tr:nth-child(even) {
+  background-color: #1c1c1c; /* Dark background for even rows */
+  color: white; /* White text for dark rows */
+}
+
+.results-table tr:nth-child(odd) {
+  background-color: #ffffff; /* Light background for odd rows */
+  color: black; /* Black text for light rows */
+}
+
+.results-table tr:hover {
+  background-color: #333; /* Highlight row on hover with darker gray (for even rows) */
+}
+
+.results-table td.fraudulent {
+  color: #f44336; /* Red text for fraudulent transactions */
+  font-weight: bold;
+}
+
+.results-table td.legitimate {
+  color: #4caf50; /* Green text for legitimate transactions */
+  font-weight: bold;
+}
+
+/* Make table responsive for smaller screens */
+@media (max-width: 768px) {
+  .results-table {
+      font-size: 0.9rem;
+      width: 100%;
+      margin-top: 1rem;
+  }
+
+  .results-table th,
+  .results-table td {
+      padding: 8px;
+      font-size: 0.8rem;
+  }
+}
+
+/* Styling for blockchain links in table and results */
+a {
+  color: #6a1b9a; /* Purple link color */
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Enhanced Login Styles */
+.enhanced-login {
+  background: rgba(24, 24, 24, 0.95);
+  backdrop-filter: blur(6px);
+  border: 1.5px solid #6a1b9a;
+  box-shadow: 0 4px 24px rgba(108, 43, 180, 0.16);
+  padding: 2.2rem 2.7rem 2rem 2.7rem;
+  border-radius: 18px;
+  min-width: 320px;
+  max-width: 350px;
+}
+
+.login-title {
+  color: #cd9bff;
+  margin-bottom: 1.7rem;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-input-group {
+  margin-bottom: 1.3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-input-group label {
+  margin-bottom: 0.4rem;
+  color: #cd9bff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.login-input-wrapper {
+  display: flex;
+  align-items: center;
+  background: #222;
+  border-radius: 4px;
+  padding: 0 0.7rem;
+  border: 1.5px solid #333;
+  transition: border 0.2s;
+}
+
+.login-input-wrapper:focus-within {
+  border: 1.5px solid #cd9bff;
+}
+
+.login-input-icon {
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.login-input-group input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 1rem 0.2rem;
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+  text-align: center;
+}
+
+.login-input-group input::placeholder {
+  color: #bfa6e6;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.login-error {
+  color: #ff4d4f;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+.enhanced-login-btn {
+  background: linear-gradient(90deg, #6a1b9a 60%, #cd9bff 100%);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 0;
+  border-radius: 4px;
+  font-size: 1.08rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 0.4rem;
+  box-shadow: 0 2px 8px rgba(108, 43, 180, 0.11);
+}
+
+.enhanced-login-btn:hover {
+  background: linear-gradient(90deg, #cd9bff 10%, #6a1b9a 100%);
+  color: #181818;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 500px) {
+  .enhanced-login {
+    padding: 1.1rem 0.7rem 1.3rem 0.7rem;
+    min-width: unset;
+    width: 98vw;
+    max-width: 98vw;
+  }
+}
+
+
+
+
