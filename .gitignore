@@ -12,6 +12,7 @@ backend/*.pyc
 backend/*.pyo
 backend/*.pyd
 backend/.DS_Store
+backend/Synthetic_Financial_datasets_log.csv
 
 # ---- ML / Data Files ----
 backend/models/
